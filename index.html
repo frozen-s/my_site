@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Типові помилки при складанні НМТ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #0057b7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        main {
+            padding: 20px;
+            max-width: 960px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #0057b7;
+            cursor: pointer;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        footer {
+            background: #eee;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+        .collapsible-content {
+            display: none;
+            margin-top: 10px;
+        }
+        .quiz {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .quiz-question {
+            margin-bottom: 15px;
+        }
+        .quiz-answer {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .quiz-answer:hover {
+            background-color: #98b7d3;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea, button {
+            padding: 10px;
+            font-size: 1em;
+        }
+        * Стили для кнопки */
+        #theme-toggle {
+    background-color: #0057b7;
+    border: 2px solid gray; /* Серая рамка */
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 60px; /* Фиксированная ширина */
+    height: 30px; /* Фиксированная высота */
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Ограничиваем область видимости */
+}
+
+#theme-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    z-index: 1; /* Убедитесь, что псевдоэлемент находится над кнопкой */
+}
+
+.dark-theme #theme-toggle {
+    background-color: #333333; /* Темная кнопка для темной темы */
+}
+
+.dark-theme #theme-toggle::before {
+    left: calc(100% - 25px); /* Перемещаем кружок вправо */
+    background-color: black;
+}
+
+.light-theme #theme-toggle {
+    background-color: #f0f0f0; /* Светлая кнопка для светлой темы */
+}
+
+.light-theme #theme-toggle::before {
+    left: 5px; /* Перемещаем кружок влево */
+    background-color: gray;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div style="text-align: right; padding: 10px;">
+            <button id="theme-toggle"></button>
+                Темна тема
+            </button>
+        </div>    
+        <h1>Типові помилки при складанні НМТ</h1>
+    </header>
+    <main>
+        <section>
+            <h2 onclick="toggleContent('intro')">Що таке НМТ?</h2>
+            <div id="intro" class="collapsible-content">
+                <p>Національний мультипредметний тест (НМТ) — це форма вступного іспиту для вступу до закладів вищої освіти України. Він включає завдання з кількох предметів одночасно (зазвичай українська мова, математика, історія України та інші).</p>
+                <p>НМТ проводиться в електронному форматі та вимагає швидкої орієнтації, уважності та знань у ключових сферах шкільної програми.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 onclick="toggleContent('errors')">Типові помилки</h2>
+            <div id="errors" class="collapsible-content">
+                <p>Багато випускників допускають однакові помилки під час складання НМТ, що негативно впливає на їх результати та обмежує можливості вступу до омріяного закладу вищої освіти. Це свідчить про потребу в кращій підготовці, усвідомленні типових помилок та виробленні стратегії їх уникнення.</p>
+                <h3>Українська мова – типові помилки:</h3>
+                <ul>
+                    <li>Плутанина з правописом складних слів (разом/окремо/через дефіс).</li>
+                    <li>Нерозуміння норм синтаксису (види підрядних речень, узгодження).</li>
+                    <li>Помилки в визначенні засобів виразності.</li>
+                    <li>Неуважність до формулювання завдань (особливо з НЕ/НІ в запитаннях).</li>
+                <p>Основа проблеми: недостатнє опрацювання теорії + слабка практика тестових завдань.</p>
+                </ul>
+
+                <h3>Математика – типові помилки:</h3>
+                <ul>
+                    <li>Помилки при розв’язуванні рівнянь.</li>
+                    <li>Помилки при роботі з формулами площ, об’ємів, тригонометрією</li>
+                    <li>Неуважність при роботі з дробами та десятковими числами.</li>
+                    <li>Поспішність: розрахунки без перевірки.</li>
+                <p>Основа проблеми: нестача навички аналізу задач + поверхневе засвоєння формул.</p>
+                </ul>
+
+                <h3>Історія України:</h3>
+                <ul>
+                    <li>Невірне запам'ятовування дат ключових подій.</li>
+                    <li>Плутанина в хронології подій (особливо період ХХ століття).</li>
+                    <li>Помилки у визначенні історичних постатей.</li>
+                </ul>
+                <p><strong>Приклад:</strong> У якому році відбулася битва під Крутами? — Часто плутають з іншими подіями 1918 року.</p>
+            </div>
+        </section>
+        <section>
+            <h2 style="text-align: left; color: #0057b7;">Міні-тести</h2>
+    <div id="timer" style="font-size: 1.2em; color: red; display: none; margin-top: 10px;">
+        Залишилось часу: <span id="time-remaining">10:00</span>
+    </div>
+        </section>
+        
+        <section>
+            <h2 onclick="toggleContent('quiz-ukrainian')">🟦 Українська мова</h2>
+            <div id="quiz-ukrainian" class="collapsible-content quiz">
+                <div class="quiz-question">
+                    <p>1. Укажіть речення з правильною пунктуацією:</p>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">A) Мені здавалося що, ніч ніколи не закінчиться.</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">B) Мені здавалося, що ніч, ніколи не закінчиться.</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, true)">C) Мені здавалося, що ніч ніколи не закінчиться.</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">D) Мені здавалося що ніч ніколи не закінчиться.</div>
+                    <div class="feedback"></div>
+                </div>
+                <div class="quiz-question">
+                    <p>2. У якому рядку всі слова пишуться через дефіс?</p>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">A) Півєвропи, екс-президент, пів-яблука</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">B) Наврядчи, з-під-лоби, по-українськи</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, true)">C) Де-не-де, пів-міста, по-нашому</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">D) По-своєму, хтозна-який, з-під-лоба</div>
+                    <div class="feedback"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2 onclick="toggleContent('quiz-math')">🟨 Математика</h2>
+            <div id="quiz-math" class="collapsible-content quiz">
+                <div class="quiz-question">
+                    <p>3. Розв’яжіть рівняння: 3(x−2)=2x+5</p>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">A) x= −1</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, true)">B) x= 11</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">C) x= −11</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">D) x= 1</div>
+                    <div class="feedback"></div>
+                </div>
+                <div class="quiz-question">
+                    <p>4. Скільки відсотків становить число 25 від числа 200?</p>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">A) 8%</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, true)">B) 12.5%</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">C) 20%</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">D) 25%</div>
+                    <div class="feedback"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2 onclick="toggleContent('quiz-history')">🟥 Історія України</h2>
+            <div id="quiz-history" class="collapsible-content quiz">
+                <div class="quiz-question">
+                    <p>5. У якому році відбулася битва під Крутами?</p>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">A) 1917</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, true)">B) 1918</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">C) 1919</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">D) 1920</div>
+                    <div class="feedback"></div>
+                </div>
+                <div class="quiz-question">
+                    <p>6. Що з переліченого характерне для періоду НЕПу?</p>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">A) Колективізація</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">B) Воєнний комунізм</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, true)">C) Вільна торгівля, відновлення кооперації</div>
+                    <div class="quiz-answer" onclick="checkAnswer(this, false)">D) Масові репресії</div>
+                    <div class="feedback"></div>
+                </div>
+            </div>
+        </section>
+           
+        </section>
+
+        <section>
+            <h2 onclick="toggleContent('resources')">Корисні ресурси</h2>
+            <div id="resources" class="collapsible-content">
+                <ul>
+
+                    <li><a href="https://testportal.gov.ua/" target="_blank">testportal.gov.ua</a> — Офіційний сайт УЦОЯО</li>
+                    <li><a href="https://zno.osvita.ua/" target="_blank">zno.osvita.ua</a> — Завдання та тренувальні тести</li>
+                    <li><a href="https://ilearn.org.ua/" target="_blank">iLearn</a> — Онлайн-платформа для підготовки</li>
+                    <li><a href="https://prometheus.org.ua/" target="_blank">Prometheus</a> — Безкоштовні онлайн-курси</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 onclick="toggleContent('feedback')">Зворотний зв'язок</h2>
+            <div id="feedback" class="collapsible-content">
+                <form action="mailto:olek123wert@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Ім'я:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="message">Повідомлення:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Надіслати</button>
+                </form>
+                <p><small>Після натискання відкриється ваш поштовий клієнт для надсилання листа.</small></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Підготовка до НМТ | Освітній ресурс
+    </footer>
+
+    <script>
+    function toggleContent(id) {
+    const el = document.getElementById(id);
+    const header = document.querySelector(`h2[onclick="toggleContent('${id}')"]`);
+    if (el.style.display === "block") {
+        el.style.display = "none";
+        header.setAttribute("aria-expanded", "false");
+    } else {
+        el.style.display = "block";
+        header.setAttribute("aria-expanded", "true");
+    }
+}
+
+    function checkAnswer(element, isCorrect) {
+    // Находим элемент обратной связи для текущего вопроса
+    const feedback = element.parentElement.querySelector(".feedback");
+
+    // Сбрасываем текст обратной связи перед обновлением
+    feedback.textContent = "";
+
+    // Обновляем текст обратной связи в зависимости от правильности ответа
+    if (isCorrect) {
+        feedback.textContent = "Молодець!";
+        feedback.style.color = "green";
+    } else {
+        feedback.textContent = "Спробуй ще раз.";
+        feedback.style.color = "red";
+    }
+}
+ 
+let timerInterval;
+
+function toggleContent(id) {
+    const el = document.getElementById(id);
+    const timer = document.getElementById('timer');
+    const timeRemaining = document.getElementById('time-remaining');
+
+    if (el.style.display === "block") {
+        el.style.display = "none";
+
+        // Проверяем, есть ли открытые вкладки
+        const anyOpen = Array.from(document.querySelectorAll('.collapsible-content'))
+            .some(content => content.style.display === "block");
+
+        if (!anyOpen) {
+            timer.style.display = "none"; // Скрываем таймер, если все вкладки закрыты
+            clearInterval(timerInterval);
+        }
+    } else {
+        // Закрываем все другие вкладки
+        document.querySelectorAll('.collapsible-content').forEach(content => {
+            content.style.display = "none";
+        });
+
+        // Открываем текущую вкладку
+        el.style.display = "block";
+
+        // Показываем таймер и запускаем отсчет
+        if (id === 'quiz-ukrainian' || id === 'quiz-math' || id === 'quiz-history') {
+            timer.style.display = "block";
+            startTimer(10, timeRemaining); // 10 минут
+        }
+    }
+}
+function startTimer(minutes, display) {
+    let time = minutes * 60; // Переводим минуты в секунды
+
+    clearInterval(timerInterval); // Сбрасываем предыдущий таймер, если он был
+    timerInterval = setInterval(() => {
+        const minutes = Math.floor(time / 60);
+        const seconds = time % 60;
+
+        // Форматируем время как MM:SS
+        display.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        if (time <= 0) {
+            clearInterval(timerInterval);
+            alert("Час вийшов!");
+        }
+
+        time--;
+    }, 1000);
+}
+
+function checkAnswer(element, isCorrect) {
+    const feedback = element.parentElement.querySelector(".feedback");
+    feedback.textContent = "";
+    if (isCorrect) {
+        feedback.textContent = "Молодець!";
+        feedback.style.color = "green";
+    } else {
+        feedback.textContent = "Спробуй ще раз.";
+        feedback.style.color = "red";
+    }
+}
+
+// Логика переключения темы
+const themeToggleButton = document.getElementById('theme-toggle');
+themeToggleButton.addEventListener('click', () => {
+    const body = document.body;
+    const isDarkTheme = body.classList.toggle('dark-theme');
+    body.classList.toggle('light-theme', !isDarkTheme);
+});
+
+// Стили для темной темы
+const style = document.createElement('style');
+style.textContent = `
+    .dark-theme {
+        background-color: #121212;
+        color: #ffffff;
+    }
+    .dark-theme header {
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+    .dark-theme main {
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+    .dark-theme .quiz-answer {
+        background-color: #333333;
+        color: #ffffff;
+    }
+    .dark-theme .quiz-answer:hover {
+        background-color: #444444;
+    }
+    .dark-theme button {
+        background-color: #333333;
+        color: #ffffff;
+    }
+    .dark-theme footer {
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+`;
+document.head.appendChild(style);
+</script>
+</body>
+</html>
